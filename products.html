@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Products</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -28,6 +29,17 @@
     <h1>Products</h1>
     <p class="lead">Our selection changes with the season and the morning bake. The ranges below are planning guides for pre-orders; no online checkout is required.</p>
 
+    <section class="shortlist-panel" aria-labelledby="shortlist-heading">
+      <h2 id="shortlist-heading">Build a pre-order shortlist</h2>
+      <p>Save the bakery items you are considering. Your shortlist stays available when you return and can be carried into the pre-order form.</p>
+      <p id="shortlist-status" class="status-message" aria-live="polite"></p>
+      <ul id="shortlist-items" class="shortlist-list"></ul>
+      <div class="shortlist-actions">
+        <button type="button" id="clear-shortlist" class="secondary-button">Clear shortlist</button>
+        <a id="shortlist-preorder-link" class="button-link" href="contact.html" hidden>Use shortlist in pre-order form</a>
+      </div>
+    </section>
+
     <section class="feature-card">
       <h2>Signature Loaf</h2>
       <div class="split">
@@ -37,6 +49,7 @@
         </figure>
         <div>
           <p>Our Signature Loaf is a customer favorite and is available daily while supplies last. For gatherings, we recommend placing a pre-order.</p>
+          <button type="button" class="favorite-button" data-product-id="signature-loaf" aria-pressed="false">Save to shortlist</button>
           <p><a class="button-link" href="contact.html">Request a bakery pre-order</a></p>
         </div>
       </div>
@@ -46,28 +59,28 @@
       <section class="product-card">
         <h2>Breads</h2>
         <img src="Bakery_c/bakery-bread_c.png" alt="Assorted artisan bread loaves displayed behind the bakery counter">
-        <ul>
-          <li><strong>Country sourdough:</strong> Naturally leavened with a crisp crust and tender crumb. $7 to $10 per loaf.</li>
-          <li><strong>Seeded whole grain:</strong> Hearty whole-grain loaf with a toasted seed blend. $8 to $11 per loaf.</li>
-          <li><strong>Soft sandwich loaf:</strong> Mild, sliceable bread for toast and lunches. $6 to $9 per loaf.</li>
+        <ul class="product-options">
+          <li><strong>Country sourdough:</strong> Naturally leavened with a crisp crust and tender crumb. $7 to $10 per loaf.<br><button type="button" class="favorite-button" data-product-id="country-sourdough" aria-pressed="false">Save to shortlist</button></li>
+          <li><strong>Seeded whole grain:</strong> Hearty whole-grain loaf with a toasted seed blend. $8 to $11 per loaf.<br><button type="button" class="favorite-button" data-product-id="seeded-whole-grain" aria-pressed="false">Save to shortlist</button></li>
+          <li><strong>Soft sandwich loaf:</strong> Mild, sliceable bread for toast and lunches. $6 to $9 per loaf.<br><button type="button" class="favorite-button" data-product-id="soft-sandwich-loaf" aria-pressed="false">Save to shortlist</button></li>
         </ul>
       </section>
 
       <section class="product-card">
         <h2>Pastries</h2>
-        <ul>
-          <li><strong>Butter croissants:</strong> Light, flaky layers baked each morning. $4 to $6 each.</li>
-          <li><strong>Fruit danishes:</strong> Seasonal fruit and pastry cream in laminated dough. $4 to $7 each.</li>
-          <li><strong>Morning buns:</strong> Buttery spirals with cinnamon and citrus sugar. $4 to $6 each.</li>
+        <ul class="product-options">
+          <li><strong>Butter croissants:</strong> Light, flaky layers baked each morning. $4 to $6 each.<br><button type="button" class="favorite-button" data-product-id="butter-croissants" aria-pressed="false">Save to shortlist</button></li>
+          <li><strong>Fruit danishes:</strong> Seasonal fruit and pastry cream in laminated dough. $4 to $7 each.<br><button type="button" class="favorite-button" data-product-id="fruit-danishes" aria-pressed="false">Save to shortlist</button></li>
+          <li><strong>Morning buns:</strong> Buttery spirals with cinnamon and citrus sugar. $4 to $6 each.<br><button type="button" class="favorite-button" data-product-id="morning-buns" aria-pressed="false">Save to shortlist</button></li>
         </ul>
       </section>
 
       <section class="product-card">
         <h2>Cakes</h2>
-        <ul>
-          <li><strong>Celebration cakes:</strong> Classic flavors with simple seasonal decoration. $35 to $75.</li>
-          <li><strong>Sheet cakes:</strong> Made for birthdays, office gatherings, and community events. $45 to $95.</li>
-          <li><strong>Small occasion cakes:</strong> Six-inch cakes for intimate celebrations. $28 to $45.</li>
+        <ul class="product-options">
+          <li><strong>Celebration cakes:</strong> Classic flavors with simple seasonal decoration. $35 to $75.<br><button type="button" class="favorite-button" data-product-id="celebration-cakes" aria-pressed="false">Save to shortlist</button></li>
+          <li><strong>Sheet cakes:</strong> Made for birthdays, office gatherings, and community events. $45 to $95.<br><button type="button" class="favorite-button" data-product-id="sheet-cakes" aria-pressed="false">Save to shortlist</button></li>
+          <li><strong>Small occasion cakes:</strong> Six-inch cakes for intimate celebrations. $28 to $45.<br><button type="button" class="favorite-button" data-product-id="small-occasion-cakes" aria-pressed="false">Save to shortlist</button></li>
         </ul>
         <p>For custom requests, allergy questions, or larger quantities, please use the <a href="contact.html">Contact and Pre-Order form</a>.</p>
       </section>
